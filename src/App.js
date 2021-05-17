@@ -1,8 +1,14 @@
-import logo from "./logo.svg";
+import WorkingTree from "./components/WorkingTree";
 import "./App.css";
 
 function App() {
-  return <div>Home</div>;
+  return (
+    <>
+      <header>KJ_BANK working tree</header>
+      <WorkingTree />
+      <footer>©Ha-young, Kim__front-end developer</footer>
+    </>
+  );
 }
 
 export default App;
