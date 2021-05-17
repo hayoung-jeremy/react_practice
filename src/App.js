@@ -1,6 +1,6 @@
-import WorkingTree from "./components/WorkingTree";
 import "./App.css";
 import Header from "./components/Header";
+import WorkingTree from "./components/WorkingTree";
 
 function App() {
   return (
