@@ -16,8 +16,28 @@ const DataPersonal = () => {
   const depth_01_title = depth_01.map(function (element) {
     return element.app_name;
   });
+  const depth_02 = depth_01.map(function (element) {
+    return element.menus.map(function (element) {
+      return element.app_name;
+    });
+  });
+  const depth_02_url = depth_01.map(function (element) {
+    return element.menus.map(function (element) {
+      return element.app_url;
+    });
+  });
   console.log(depth_01_title);
-  return <></>;
+  console.log(depth_02);
+  console.log(depth_02_url);
+  return (
+    <>
+      <ul>
+        {depth_01_title.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </>
+  );
 };
 
 export default DataPersonal;
