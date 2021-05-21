@@ -4,6 +4,7 @@ const Header = () => {
   return (
     <header>
       <h1>KJ_BANK working tree</h1>
+      <nav></nav>
     </header>
   );
 };
