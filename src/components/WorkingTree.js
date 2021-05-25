@@ -1,7 +1,7 @@
 import React from "react";
-import DataPersonal from "./DataPersonal";
-import DataEnterprise from "./DataEnterprise";
-import DataVerification from "./DataVerification";
+import DataPersonal from "./dataPersonal/DataPersonal";
+import DataEnterprise from "./dataEnterprise/DataEnterprise";
+import DataVerification from "./dataVerification/DataVerification";
 
 const WorkingTree = () => {
   return (
