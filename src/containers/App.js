@@ -1,8 +1,12 @@
+import Main from "../pages/Main";
+
 function App() {
   return (
-    <div className="App">
+    <>
+      <header>Ha young Design</header>
+      <Main />
       <footer>©2021. Ha Young, Kim. all rights reserved.</footer>
-    </div>
+    </>
   );
 }
 
