@@ -1,4 +1,5 @@
 import Button from "../components/Button";
+import { ThemeProvider } from "styled-components";
 import Main from "../pages/Main";
 
 // light mode, dark mode toggle button
@@ -23,22 +24,37 @@ const onClickToggleTheme = () => {
 
 function App() {
   return (
-    <>
+    <ThemeProvider
+      theme={{
+        palette: {
+          main: "#1e96fc",
+          grayScale: "#333",
+          warning: "#ffc600",
+        },
+      }}
+    >
       <header>
         Ha young Design
-        <Button onClick={onClickToggleTheme}>Switch Mode</Button>
-        <Button
-          isAnchor
-          isNewTap
-          href="https://github.com/hayoung-jeremy"
-          rel="noreferrer"
-        >
-          Github
-        </Button>
+        <div>
+          <Button color="grayScale" onClick={onClickToggleTheme} en>
+            Switch Mode
+          </Button>
+          <Button
+            color="main"
+            isAnchor
+            isNewTap
+            href="https://github.com/hayoung-jeremy"
+            rel="noreferrer"
+            en
+          >
+            Github
+          </Button>
+          <Button color="warning">warning</Button>
+        </div>
       </header>
       <Main />
       <footer>©2021. Ha Young, Kim. all rights reserved.</footer>
-    </>
+    </ThemeProvider>
   );
 }
 
