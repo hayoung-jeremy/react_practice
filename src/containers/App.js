@@ -37,16 +37,15 @@ function App() {
       <header>
         Ha young Design
         <div>
-          <Button color="grayScale" onClick={onClickToggleTheme} en>
+          <Button color="grayScale" onClick={onClickToggleTheme}>
             Switch Mode
           </Button>
           <Button
-            color="main"
             isAnchor
             isNewTab
             href="https://github.com/hayoung-jeremy"
             rel="noreferrer"
-            en
+            color="main"
           >
             Github
           </Button>
