@@ -30,6 +30,7 @@ function App() {
           main: "#1e96fc",
           grayScale: "#333",
           warning: "#ffc600",
+          error: "#db3069",
         },
       }}
     >
@@ -49,7 +50,10 @@ function App() {
           >
             Github
           </Button>
-          <Button color="warning">warning</Button>
+          <Button color="warning" outline>
+            warning
+          </Button>
+          <Button color="error">error</Button>
         </div>
       </header>
       <Main />
