@@ -17,21 +17,6 @@ const commonStyles = css`
   }
 `;
 
-const fontStyles = css`
-  ${(props) => {
-    if (props.en) {
-      return css`
-        font-family: "Montserrat", sans-serif;
-      `;
-    } else {
-      return css`
-        font-family: "Noto Sans KR" sans-serif;
-      `;
-    }
-  }}
-  font-size: 1rem;
-`;
-
 const colorStyles = css`
   ${({ theme, color }) => {
     const buttonColor = theme.palette[color];
@@ -68,13 +53,12 @@ const colorStyles = css`
 const StyledButton = styled.button`
   ${commonStyles}
   ${colorStyles}
-  ${fontStyles}
 `;
 
 const Anchor = styled(StyledButton.withComponent("a"))`
   ${commonStyles}
   ${colorStyles}
-  ${fontStyles}
+  
   text-decoration: none;
   color: ${(props) => props.fontColor};
 `;
