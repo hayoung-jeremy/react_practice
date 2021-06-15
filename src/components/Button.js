@@ -92,6 +92,7 @@ const Button = ({
   size,
   ...rest
 }) => {
+  console.log(size);
   return isAnchor ? (
     <Anchor href={href} target={isNewTab ? `_blank` : ""} size={size} {...rest}>
       {children}
@@ -101,6 +102,11 @@ const Button = ({
       {children}
     </StyledButton>
   );
+};
+
+Button.defaultProps = {
+  color: "main",
+  size: "medium",
 };
 
 export default Button;

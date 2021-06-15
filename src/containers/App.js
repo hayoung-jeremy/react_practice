@@ -46,6 +46,7 @@ function App() {
             href="https://github.com/hayoung-jeremy"
             rel="noreferrer"
             color="main"
+            size="large"
           >
             Github
           </Button>
