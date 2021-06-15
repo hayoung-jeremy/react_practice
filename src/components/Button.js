@@ -79,9 +79,9 @@ const Anchor = styled(StyledButton.withComponent("a"))`
   color: ${(props) => props.fontColor};
 `;
 
-const Button = ({ children, onClick, isAnchor, isNewTap, href, ...rest }) => {
+const Button = ({ children, onClick, isAnchor, isNewTab, href, ...rest }) => {
   return isAnchor ? (
-    <Anchor href={href} target={isNewTap ? `_blank` : ""} {...rest}>
+    <Anchor href={href} target={isNewTab ? `_blank` : ""} {...rest}>
       {children}
     </Anchor>
   ) : (

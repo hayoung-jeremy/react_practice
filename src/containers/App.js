@@ -43,7 +43,7 @@ function App() {
           <Button
             color="main"
             isAnchor
-            isNewTap
+            isNewTab
             href="https://github.com/hayoung-jeremy"
             rel="noreferrer"
             en
