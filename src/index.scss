@@ -1,15 +1,40 @@
+:root {
+  --background-color: #222;
+}
+.blind {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -9999em;
+}
 body,
 button,
 input {
   font-family: "Montserrat", "Noto Sans KR", sans-serif;
   font-size: 14px;
 }
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  color: #aaa;
+  margin-top: 76px;
+}
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #222;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #1f1f1f;
+  padding: 20px 24px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+header p {
+  font-size: 20px;
   color: #666;
-  padding: 12px 24px;
 }
