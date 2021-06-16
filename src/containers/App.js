@@ -30,7 +30,7 @@ function App() {
           main: "#1e96fc",
           grayScale: "#333",
           complete: "#1E96FC",
-          success: "#06D6A0",
+          success: "#05a47b",
           warning: "#e69c09",
           error: "#af002f",
         },

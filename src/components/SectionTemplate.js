@@ -5,7 +5,7 @@ const StyledSection = styled.section`
   width: 100%;
   padding: 20px;
   background-color: #262626;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   & > .title {
     font-size: 20px;
@@ -20,7 +20,12 @@ const StyledSection = styled.section`
   }
 `;
 
-const Section = ({ children, ish2Blind, h2Title, ...rest }) => {
+const Container = styled.div`
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+`;
+
+const Section = ({ children, ish2Blind, h2Title, isContainer, ...rest }) => {
   return (
     <StyledSection {...rest}>
       {ish2Blind ? (
@@ -28,7 +33,7 @@ const Section = ({ children, ish2Blind, h2Title, ...rest }) => {
       ) : (
         <h2 className="title">{h2Title}</h2>
       )}
-      {children}
+      {isContainer ? <Container>{children}</Container> : children}
     </StyledSection>
   );
 };
