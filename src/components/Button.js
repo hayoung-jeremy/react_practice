@@ -15,7 +15,9 @@ const commonStyles = css`
   transition: 0.15s;
   height: 2.25rem;
 
-  &:not(:first-child) {
+  &:not(:first-of-type),
+  a ~ &,
+  & ~ a {
     margin-left: 12px;
   }
 `;
@@ -92,7 +94,6 @@ const Button = ({
   size,
   ...rest
 }) => {
-  console.log(size);
   return isAnchor ? (
     <Anchor href={href} target={isNewTab ? `_blank` : ""} size={size} {...rest}>
       {children}

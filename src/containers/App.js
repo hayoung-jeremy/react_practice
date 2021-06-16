@@ -8,7 +8,7 @@ if (currentTheme === "dark") {
   document.body.classList.add("dark-theme");
 }
 
-const onClickToggleTheme = () => {
+const onClickToggleBodyTheme = () => {
   // toggle the .dark-theme class on each click
   document.body.classList.toggle("dark-theme");
 
@@ -29,15 +29,17 @@ function App() {
         palette: {
           main: "#1e96fc",
           grayScale: "#333",
-          warning: "#ffc600",
-          error: "#db3069",
+          complete: "#1E96FC",
+          success: "#06D6A0",
+          warning: "#e69c09",
+          error: "#af002f",
         },
       }}
     >
       <header>
-        Ha young Design
+        <p>Ha young Design</p>
         <div>
-          <Button color="grayScale" onClick={onClickToggleTheme}>
+          <Button color="grayScale" onClick={onClickToggleBodyTheme}>
             Switch Mode
           </Button>
           <Button
@@ -46,14 +48,10 @@ function App() {
             href="https://github.com/hayoung-jeremy"
             rel="noreferrer"
             color="main"
-            size="large"
+            outline
           >
             Github
           </Button>
-          <Button color="warning" outline>
-            warning
-          </Button>
-          <Button color="error">error</Button>
         </div>
       </header>
       <Main />
