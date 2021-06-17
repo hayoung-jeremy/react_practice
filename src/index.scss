@@ -11,7 +11,6 @@ body,
 button,
 input {
   font-family: "Montserrat", "Noto Sans KR", sans-serif;
-  font-size: 14px;
 }
 body {
   width: 100%;
@@ -19,6 +18,7 @@ body {
   background-color: var(--background-color);
   color: #aaa;
   margin-top: 76px;
+  font-size: 14px;
 }
 
 header {

@@ -20,11 +20,6 @@ const StyledSection = styled.section`
   }
 `;
 
-const Container = styled.div`
-  padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-`;
-
 const Section = ({ children, ish2Blind, h2Title, isContainer, ...rest }) => {
   return (
     <StyledSection {...rest}>
@@ -33,7 +28,7 @@ const Section = ({ children, ish2Blind, h2Title, isContainer, ...rest }) => {
       ) : (
         <h2 className="title">{h2Title}</h2>
       )}
-      {isContainer ? <Container>{children}</Container> : children}
+      {children}
     </StyledSection>
   );
 };

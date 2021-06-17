@@ -10,7 +10,7 @@ const commonStyles = css`
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  padding: 8px 12px;
+  padding: 0.5rem 1.25rem;
   color: #fff;
   transition: 0.15s;
   height: 2.25rem;
@@ -25,6 +25,7 @@ const commonStyles = css`
 const colorStyles = css`
   ${({ theme, color }) => {
     const buttonColor = theme.palette[color];
+    const outlineColor = lighten(0.2, buttonColor);
     return css`
       background-color: ${buttonColor};
       &:hover {
@@ -38,21 +39,42 @@ const colorStyles = css`
           : darken(0.08, buttonColor)};
       }
       // outline
+
       ${(props) =>
         props.outline &&
         css`
-          color: ${buttonColor};
-          border: 1px solid ${buttonColor};
-          background-color: ${rgba(buttonColor, 0)};
+          color: ${outlineColor};
+          border: 1px solid ${outlineColor};
+          background-color: ${rgba(outlineColor, 0)};
           &:hover {
-            background-color: ${rgba(buttonColor, 0.1)};
+            background-color: ${rgba(outlineColor, 0.1)};
           }
           &:active {
-            background-color: ${darken(0.2, rgba(buttonColor, 0.1))};
+            background-color: ${darken(0.2, rgba(outlineColor, 0.1))};
           }
         `}
     `;
   }}
+`;
+
+const fullWidthStyle = css`
+  ${(props) =>
+    props.fullWidth &&
+    css`
+      width: 100%;
+      &:not(:first-of-type) {
+        margin-left: 0;
+        margin-top: 1rem;
+      }
+    `}
+`;
+const roundedStyles = css`
+  ${({ rounded, size }) =>
+    rounded &&
+    css`
+      padding: 8px 20px;
+      border-radius: ${sizes[size].height};
+    `}
 `;
 
 const sizes = {
@@ -66,7 +88,7 @@ const sizes = {
   },
   small: {
     height: "1.75rem",
-    fontSize: "0.875rem",
+    fontSize: "0.75rem",
   },
 };
 
@@ -81,6 +103,8 @@ const StyledButton = styled.button`
   ${commonStyles}
   ${colorStyles}
   ${sizeStyles}
+  ${fullWidthStyle}
+  ${roundedStyles}
 `;
 
 const Anchor = StyledButton.withComponent("a");
